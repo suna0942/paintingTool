@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-container">
+      <div class="title-container">
+        <p>&#127912; 내가 그린</p>
+        <p>기린 그림판🦒</p>
+      </div>
+      <div class="btn-container">
+        <button id="mode-btn" class="btn">🎨 Fill</button>
+        <label id="line-value" for="line-width"></label>
+        <input id="line-width" type="range" min="1" max="10" value="5">
+      </div>
+      <div>
+        <div>
+          <label id="color-value" for="color"></label>
+          <input id="color" type="color">
+        </div>
+        <div class="color-options">
+          <div class="color-option" style="background-color: #1abc9c;" data-color="#1abc9c"></div>
+          <div class="color-option" style="background-color: #3498db;" data-color="#3498db"></div>
+          <div class="color-option" style="background-color: #34495e;" data-color="#34495e"></div>
+          <div class="color-option" style="background-color: #27ae60;" data-color="#27ae60"></div>
+          <div class="color-option" style="background-color: #8e44ad;" data-color="#8e44ad"></div>
+          <div class="color-option" style="background-color: #f1c40f;" data-color="#f1c40f"></div>
+          <div class="color-option" style="background-color: #e74c3c;" data-color="#e74c3c"></div>
+          <div class="color-option" style="background-color: #95a5a6;" data-color="#95a5a6"></div>
+          <div class="color-option" style="background-color: #d35400;" data-color="#d35400"></div>
+          <div class="color-option" style="background-color: #bdc3c7;" data-color="#bdc3c7"></div>
+          <div class="color-option" style="background-color: #2ecc71;" data-color="#2ecc71"></div>
+          <div class="color-option" style="background-color: #e67e22;" data-color="#e67e22"></div>
+        </div>
+      </div>
+    </div>
+    <canvas></canvas>
+    <div class="btns">
+      <div>
+        <div>
+          <button id="save" class="btn save-btn">Save</button>
+          <select name="save-extension" id="save-extension">
+            <option value="png">png</option>
+            <option value="jpg">jpg</option>
+          </select>
+        </div>
+        <label for="image-name">이미지 저장 이름: </label>
+        <input id="image-name" type="text" placeholder="Write Image name" maxlength="30">
+      </div>
+      <div class="btn-container row">
+        <button id="destroy-btn" class="btn reset-btn">Reset</button>
+        <button id="eraser-btn" class="btn eraser-btn">Eraser</button>
+      </div>
+      <div class="btn-container">
+        <label for="text">Text 입력: </label>
+        <input type="text" placeholder="Write and then double click" id="text">
+      </div>
+      <div class="btn-container">
+        <label for="fileSize">File 크기: <span>100</span>%</label>
+        <input type="range" name="fileSize" id="fileSize" min="10" max="100" value="100" step="10">
+        <span>File 위치:</span>
+        <div class="file-spot">
+          <label for="file-spot-x">X축</label>
+          <input type="number" id="file-spot-x"/>
+          <label for="file-spot-y">Y축</label>
+          <input type="number" id="file-spot-y"/>
+        </div>
+        <input type="file" accept="image/*" id="file">
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
