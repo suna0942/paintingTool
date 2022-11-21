@@ -18,9 +18,6 @@
     align-items: flex-end;
     justify-content: space-between;
   }
-  .title-container {
-
-  }
   .left-container .color-options {
     grid-template-columns: repeat(6, 1fr);
   }
