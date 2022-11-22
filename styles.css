@@ -95,6 +95,7 @@ body {
 .color-options {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
   gap: 8px;
   justify-items: center;
 }

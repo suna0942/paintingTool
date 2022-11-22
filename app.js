@@ -1,20 +1,26 @@
+// 저장 관련 변수
 const saveBtn = document.getElementById("save");
 const imgName = document.getElementById("image-name");
 const imgExtensions = document.getElementById("save-extension");
+// file, text 추가 관련 변수
 const textInput = document.getElementById("text");
 const fileInput = document.getElementById("file");
 const fileSize = document.getElementById("fileSize");
 const fileSpotX = document.getElementById("file-spot-x");
 const fileSpotY = document.getElementById("file-spot-y");
 const showFileSize = document.querySelector("label[for=fileSize] span");
+// 색상 관련 변수
 const colorOptions = Array.from(document.getElementsByClassName("color-option"));
 const color = document.getElementById("color");
+const showColorValue = document.getElementById("color-value");
+// 선 굵기 관련 변수
+const lineWidth = document.getElementById("line-width");
+const showLineWidthValue = document.getElementById("line-value");
+// 기타 버튼 변수
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
 const eraserBtn = document.getElementById("eraser-btn");
-const showColorValue = document.getElementById("color-value");
-const lineWidth = document.getElementById("line-width");
-const showLineWidthValue = document.getElementById("line-value");
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -88,7 +94,7 @@ function onModeClick(e){
   }
   else {
     isFilling = true;
-    modeBtn.innerText = "Draw";
+    modeBtn.innerText = "🖌 Draw";
   }
 };
 
